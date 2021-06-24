@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2d3468;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.container .stoper-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 320px;
+  height: 600px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #242424;
+  position: relative;
+  padding: 2rem;
+}
+
+.container .stoper-box h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.container .stoper-box .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .stoper-box .buttons .btn {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: #9e9e9e;
+  width: 45%;
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.container .stoper-box .buttons .btn:first-child {
+  margin-bottom: 1rem;
+  background-color: #8b20c8;
+  color: white;
+}
+
+.container .stoper-box .buttons .btn:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.container .stoper-box .menu {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  width: calc(100% - 4rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .stoper-box .menu .icon-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container .stoper-box .menu .icon-btn img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.2rem;
+}
+
+.container .stoper-box .menu .icon-btn p {
+  font-size: 11px;
+  color: #767676;
+}
+
+.container .stoper-box .menu .icon-btn .diff {
+  color: #911ec1;
+}
+/*# sourceMappingURL=style.css.map */
