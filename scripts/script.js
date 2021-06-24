@@ -2,18 +2,24 @@
 
 let start = 0;
 let isRunning = false;
+let countClick = 0;
 const startBtn = document.getElementById("start");
 console.log(isRunning);
 const calcTime = () => {
   if (isRunning) {
-    const minutes = Math.floor((start / 60) % 60);
-    const seconds = Math.floor(start % 60);
-    start++;
-    const time = (document.getElementById("time").innerHTML = `${timeFormat(
-      minutes
-    )}:${timeFormat(seconds)}`);
+    if (countClick < 1) {
+      const minutes = Math.floor((start / 60) % 60);
+      const seconds = Math.floor(start % 60);
+      start++;
+      const time = (document.getElementById("time").innerHTML = `${timeFormat(
+        minutes
+      )}:${timeFormat(seconds)}`);
 
-    return time;
+      return time;
+    } else {
+      resetTime();
+      countClick = 0;
+    }
   }
   return;
 };
@@ -27,6 +33,7 @@ const setStart = () => {
   startBtn.addEventListener("click", () => {
     isRunning = !isRunning;
     changeButton();
+    countClick++;
   });
 };
 
