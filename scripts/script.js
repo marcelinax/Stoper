@@ -4,10 +4,10 @@ let start = 0;
 let isRunning = false;
 let countClick = 0;
 const startBtn = document.getElementById("start");
-console.log(isRunning);
+
 const calcTime = () => {
   if (isRunning) {
-    if (countClick < 1) {
+    if (countClick < 2) {
       const minutes = Math.floor((start / 60) % 60);
       const seconds = Math.floor(start % 60);
       start++;
@@ -17,8 +17,9 @@ const calcTime = () => {
 
       return time;
     } else {
-      resetTime();
+      start = 0;
       countClick = 0;
+      changeButton();
     }
   }
   return;
@@ -44,7 +45,10 @@ const timeFormat = (time) => {
 
 const resetTime = () => {
   start = 0;
-  startBtn.innerHTML = "Stop";
+  countClick = 0;
+  document.getElementById("time").innerHTML = "00:00";
+  isRunning = false;
+  changeButton();
 };
 
 document.getElementById("reset").addEventListener("click", () => {
